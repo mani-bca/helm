@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ .value.appName }}
+  name: {{ .Values.appName }}
   namespace: default
   labels:
-    app: {{ .value.appName }}
+    app: {{ .Values.appName }}
 spec:
   replicas: 5
   selector:
     matchLabels:
-      app: {{ .value.appName }}
+      app: {{ .Values.appName }}
       tier: frontend
   template:
     metadata:
       labels:
-        app: {{ .value.appName }}
+        app: {{ .Values.appName }}
         tier: frontend
     spec: # Pod spec
       containers:
