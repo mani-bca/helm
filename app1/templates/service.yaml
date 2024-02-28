@@ -1,15 +1,15 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: {{ .Values.service.name }}
+  name: {{ .Values.Service.name }}
   labels:
     app: nginx
 spec:
-  type: {{ .Values.service.type }}
+  type: {{ .Values.Service.type }}
   ports:
-    - port: {{ .Values.service.port }}
-      nodePort: {{ .Values.service.nodePort }}
-      targetPort: {{ .Values.service.targetPort }}
+    - port: {{ .Values.Service.port }}
+      nodePort: {{ .Values.Service.nodePort }}
+      targetPort: {{ .Values.Service.targetPort }}
       protocol: TCP
       name: http
   selector:
