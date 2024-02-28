@@ -1,0 +1,13 @@
+deployment:
+  replicaCount: 2
+  name: myapp2
+  image:
+    app: nginx
+    version: latest
+
+Service:
+  name: myapp2-service
+  type: NodePort
+  targetPort: 80
+  port: 80
+  nodePort: 32036
