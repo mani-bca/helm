@@ -1,0 +1,6 @@
+check error in template
+helm template . 
+
+helm template . | kubectl apply -f -
+
+helm install chart2 . -f newvaluesfile
